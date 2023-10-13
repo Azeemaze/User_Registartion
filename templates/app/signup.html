@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% extends 'app/base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+<form action="" method="post">
+    {% csrf_token %}
+    <fieldset>
+            <legend>Signup form</legend>
+        <label>Username:</label>
+        <input type="text" name="username" id="username"><br>
+
+        <label>Email:</label>
+        <input type="email" name="email" id="email"><br>
+
+        <label hidden="hidden">Password</label>
+        <input type="text" name="password1" id="password1" hidden="hidden"><br>
+    </fieldset>
+
+    <button type="submit">Signup</button>
+{% endblock %}
+
+</form>
+</body>
+</html>
